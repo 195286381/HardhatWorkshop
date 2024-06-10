@@ -2,6 +2,9 @@ import { loadFixture } from '@nomicfoundation/hardhat-toolbox/network-helpers'
 import { expect } from 'chai'
 import hre from 'hardhat'
 
+
+describe('SimpleStorage', () => {
+
  // and reset Hardhat Network to that snapshot in every test.
  async function deploySimpleStorageContractFixture() {
     // Contracts are deployed using the first signer/account by default
@@ -42,4 +45,5 @@ describe('#setMessage', () => {
         const { simpleStorageContract, otherAccount } = await loadFixture(deploySimpleStorageContractFixture)
         await expect(simpleStorageContract.connect(otherAccount).setMessage('new message')).to.be.revertedWith('Only owner can call this function')
     })
+})
 })

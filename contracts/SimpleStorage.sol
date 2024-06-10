@@ -20,7 +20,7 @@ contract SimpleStorage {
 
 	// view is free consume, no gas required
 	function getMessage() external view returns(string memory) {
-        console.log("getMessage called");
+        // console.log("getMessage called");
 		return message;
 	}
 
