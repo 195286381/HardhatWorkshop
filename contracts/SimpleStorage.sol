@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+import "hardhat/console.sol";
 contract SimpleStorage {
 	string private message;
     address public owner;
@@ -19,6 +20,7 @@ contract SimpleStorage {
 
 	// view is free consume, no gas required
 	function getMessage() external view returns(string memory) {
+        console.log("getMessage called");
 		return message;
 	}
 
