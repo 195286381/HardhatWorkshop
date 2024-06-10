@@ -10,6 +10,10 @@ npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat ignition deploy ./ignition/modules/Lock.ts
+```
+
+## 部署SimpleStorage.sol合约到sepolia测试网
+```shell
 # deploy to sepolia testnet
 npx hardhat ignitign deploy ./ignition/modules/Lock.ts --network sepolia
 ```
