@@ -1,16 +1,9 @@
-import { HardhatUserConfig, task } from "hardhat/config";
+import { HardhatUserConfig, vars } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-import "dotenv/config";
+import './hardhat.task'
 
-
-// 创建一个自定义任务打印所有的账户地址.
-task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
-
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
+const PRIVATE_KEY = vars.get('PRIVATE_KEY')
+const INFURA_API_KEY = vars.get('INFURA_API_KEY')
 
 const config: HardhatUserConfig = {
   solidity: "0.8.24",
@@ -19,10 +12,17 @@ const config: HardhatUserConfig = {
     hardhat: {
       chainId: 1337,
     },
-    sepolia: {
-      url: process.env.SEPOLIA_URL,
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    localhost: {
+      url: "http://localhost:8545",
     },
+    sepolia: {
+      url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+    },
+    mainnet: {
+      url: `https://mainnet.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+    }
   },
 };
 
