@@ -25,4 +25,21 @@ describe('WTF', () => {
       })
   })
 
+  describe('Transfer', () => {
+    it('transfer owner 100 token', async () => {
+      const { wTFContract, owner, otherAccount } = await loadFixture(deploySimpleStorageContractFixture)
+      // mint 100 token.
+      await wTFContract.mint(100);
+      console.log('wtf test')
+      console.log(await wTFContract.balanceOf(owner.address))
+      expect(await wTFContract.balanceOf(owner.address)).to.equal(2100000100);
+      await wTFContract.connect(otherAccount).mint(200);
+      console.log(await wTFContract.balanceOf(otherAccount.address));
+      expect((await wTFContract.balanceOf(otherAccount.address))).to.equal(200);
+      wTFContract.connect(owner);
+      await wTFContract.transfer(otherAccount.address, 100);
+      expect(await wTFContract.balanceOf(otherAccount.address)).to.equal(300);
+    })
+  })
+
 })

@@ -5,4 +5,8 @@ contract WTF is ERC20 {
     constructor() ERC20("WTF", "WTF") {
         _mint(msg.sender, 2_100_000_000);
     }
+
+    function mint(uint256 amount) external {
+        _mint(msg.sender, amount);
+    }
 }
