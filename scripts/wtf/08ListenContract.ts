@@ -38,8 +38,5 @@ import "dotenv/config";
 [Running] ts-node "/Users/zhuzhiwei/web3/demo_projects/HardhatWorkshop/scripts/wtf/08ListenContract.ts"
 https://mainnet.infura.io/v3/b2dbdb16f8034f65a9e1bb097f8b1c29
 0x9Db9e0e53058C89e5B94e29621a205198648425B -> 0x51C72848c68a965f66FA7a88855F9f7784502a7F 43731.215
-
 [Done] exited with code=0 in 17.075 seconds
-
-
  */
