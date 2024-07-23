@@ -61,7 +61,3 @@ const batchTransferToken = async (token: Contract, ownerAddr: string, wallets: A
         await txRes.wait()
     })
 }
-
-const start = async() => {
-    
-}

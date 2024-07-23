@@ -3,8 +3,6 @@
 
 ## 这是一个关于 wtf ethers.js 的学习项目.
 
-
-
 1. 类库介绍 ethers.js
 2. 网络提供器 provider.
 3. 读取合约信息 contract.

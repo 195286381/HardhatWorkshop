@@ -5,7 +5,6 @@ import "dotenv/config";
  * 在以太坊上，智能合约的部署是一种特殊的交易：将编译智能合约得到的字节码发送到0地址
 */
 
-
 ;(async() => {
     // 连接到一条网络, 这里选择 chainlist 获取的一个网络姐节点.
     // const provider = new ethers.JsonRpcProvider('https://ethereum-rpc.publicnode.com')
