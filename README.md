@@ -1,6 +1,6 @@
 # Hardhat Project
 
-## 这是一个hardhat合约开发脚手架的代码练习仓库
+## hardhat合约开发脚手架
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
 
 Try running some of the following tasks:

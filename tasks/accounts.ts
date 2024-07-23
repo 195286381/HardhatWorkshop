@@ -6,6 +6,6 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
     console.log('===== 以下是hardhat自带的账号: =====')
     let index = 1;
     for (const account of accounts) {
-      console.log(`${index++} ${account.address}`);
+      console.log(`${index++} ${account.address}, balance: ${hre.ethers}`);
     }
-  });
+});

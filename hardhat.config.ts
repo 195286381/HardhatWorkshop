@@ -10,7 +10,11 @@ const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
-      chainId: 1337,
+      // chainId: 1337,
+      forking: {
+        url: `https://mainnet.infura.io/v3/${INFURA_API_KEY}`,
+        // blockNumber: 17000000,
+      },
     },
     // 本地 测试网
     localhost: {
