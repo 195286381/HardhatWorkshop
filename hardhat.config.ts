@@ -13,6 +13,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       chainId: 1337,
     },
+    // Warning: The configuration within this comment has a problem.
     // fork mainnet
     // fork_mainnet: {
     //   // chainId: 1337,
@@ -21,16 +22,16 @@ const config: HardhatUserConfig = {
     //     // blockNumber: 17000000,
     //   },
     // },
-    // 本地 测试网
+    // localhost network
     localhost: {
       url: "http://localhost:8545",
     },
-    // sepolia 测试网
+    // sepolia test network
     sepolia: {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
-    // 主网
+    // mainnet network
     mainnet: {
       url: `https://mainnet.infura.io/v3/${INFURA_API_KEY}`,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],

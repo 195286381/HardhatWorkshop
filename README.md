@@ -22,6 +22,6 @@ npx hardhat ignitign deploy ./ignition/modules/Lock.ts --network sepolia
 ## Some Thoughts on Smart Contract Development
 In smart contract development, you might spend only 20% of your time actually writing the contract code, while 80% of the time could be devoted to testing your contracts. **CODE IS LAW**, once a smart contract is deployed, it cannot be altered, making testing an essential step to ensure the correctness of your contract.
 
-## ## Why You Should User Hardhat Smart Contract Development Framework
+## Why You Should User Hardhat Smart Contract Development Framework
 - the most mainstream development framework.
 - the richest community support and plugin ecosystem.
