@@ -12,13 +12,16 @@ const config: HardhatUserConfig = {
     hardhat: {
       chainId: 1337,
     },
+    // 本地 测试网
     localhost: {
       url: "http://localhost:8545",
     },
+    // sepolia 测试网
     sepolia: {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
+    // 主网
     mainnet: {
       url: `https://mainnet.infura.io/v3/${INFURA_API_KEY}`,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
