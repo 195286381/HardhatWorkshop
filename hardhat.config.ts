@@ -10,9 +10,14 @@ const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
   // defaultNetwork: "fork_mainnet",
   networks: {
+    
     hardhat: {
       chainId: 1337,
+      // warning: 注意设置gasPrice, 不然容易因为gas费用问题, 导致交易失败.
+      gasPrice: 2000000000, // 20 Gwei
+      initialBaseFeePerGas: 100000000 // 1 Gwei
     },
+
     // Warning: The configuration within this comment has a problem.
     // fork mainnet
     // fork_mainnet: {
@@ -22,10 +27,12 @@ const config: HardhatUserConfig = {
     //     // blockNumber: 17000000,
     //   },
     // },
+
     // localhost network
     localhost: {
       url: "http://localhost:8545",
     },
+
     // sepolia test network
     sepolia: {
       url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,
