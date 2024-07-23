@@ -13,13 +13,13 @@ const config: HardhatUserConfig = {
       chainId: 1337,
     },
     // fork mainnet
-    // hardhat: {
-    //   // chainId: 1337,
-    //   forking: {
-    //     url: `https://mainnet.infura.io/v3/${INFURA_API_KEY}`,
-    //     // blockNumber: 17000000,
-    //   },
-    // },
+    fork_mainnet: {
+      // chainId: 1337,
+      forking: {
+        url: `https://mainnet.infura.io/v3/${INFURA_API_KEY}`,
+        // blockNumber: 17000000,
+      },
+    },
     // 本地 测试网
     localhost: {
       url: "http://localhost:8545",
