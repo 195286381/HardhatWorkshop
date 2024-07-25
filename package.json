@@ -10,7 +10,6 @@
     "dotenv": "^16.4.5",
     "ethers": "^6.13.1",
     "lodash": "^4.17.21",
-    "merkletree": "^1.5.0",
     "merkletreejs": "^0.4.0"
   },
   "scripts": {
