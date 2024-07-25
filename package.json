@@ -6,8 +6,10 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",
+    "@types/lodash": "^4.17.7",
     "dotenv": "^16.4.5",
     "ethers": "^6.13.1",
+    "lodash": "^4.17.21",
     "merkletree": "^1.5.0",
     "merkletreejs": "^0.4.0"
   },
